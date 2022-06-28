@@ -23,7 +23,8 @@ public class MyResource {
   @Path("/healthz")
   public String helloAzure()
 
-  {//Logs every request with SLF4J
+  {
+    //Logs every request with SLF4J
     logger.info("MyResource log from {}"+MyResource.class.getSimpleName()+helloAzure() );
     return "hello" ;
   }
@@ -32,6 +33,7 @@ public class MyResource {
   @Path("/printhello")
   public String getInfo()
   {
+    //Logs every request with SLF4J
     logger.info("MyResource log from {}"+MyResource.class.getSimpleName());
     return msgService.getHello();
   }
