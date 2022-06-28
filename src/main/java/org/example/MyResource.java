@@ -26,7 +26,7 @@ public class MyResource {
   {
     //Logs every request with SLF4J
     logger.info("MyResource log from {}"+MyResource.class.getSimpleName()+helloAzure() );
-    return "hello";
+    return "hello.";
   }
   @GET
   @Produces(MediaType.TEXT_PLAIN)
