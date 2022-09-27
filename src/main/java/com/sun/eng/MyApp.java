@@ -2,7 +2,6 @@ package com.sun.eng;
 import java.net.URI;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.example.MyResource;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.internal.inject.AbstractBinder;

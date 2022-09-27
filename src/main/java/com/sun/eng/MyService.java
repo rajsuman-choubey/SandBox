@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 public class MyService {
   private static final Logger logger = (Logger) LoggerFactory.getLogger(MyApp.class);
   @Inject
-  private MessageServices msgService;
+  private MessageServices messageServices;
   @GET
   @Path("/azure")
   @Produces(MediaType.TEXT_PLAIN)
@@ -35,7 +35,7 @@ public class MyService {
   public int curiosityDateDateConversion(@QueryParam("date") String date)
   {
     logger.info("Example log from "+  MyService.class.getSimpleName() +" class, get method : convertCuriositySol()");
-    return msgService.curiosityDateDateConversion(date);
+    return messageServices.curiosityDateDateConversion(date);
   }
 }
 
