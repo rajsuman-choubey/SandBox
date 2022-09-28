@@ -2,9 +2,9 @@ package com.sun.eng;
 import java.net.URI;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.example.MyResource;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
+import org.glassfish.jersey.internal.inject.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 
   public class MyApp {
@@ -15,6 +15,13 @@ import org.glassfish.jersey.server.ResourceConfig;
 
       final ResourceConfig config = new ResourceConfig();
       config.register(MyService.class);
+      config.register(new AbstractBinder(){
+        @Override
+        protected void configure() {
+          // map this service to this contract
+          bind(MessageServiceImpl.class).to(MessageServices.class);
+        }
+      });
 
       final HttpServer httpServer =
           GrizzlyHttpServerFactory

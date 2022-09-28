@@ -8,7 +8,7 @@ import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
-public class MyApp   {
+public class MyApp{
 
   public static final String BASE_URI = "http://localhost:8080/";
 
